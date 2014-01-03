@@ -47,7 +47,7 @@ class CackleReviewSync {
 
     function get_reviews($review_last_modified, $cackle_page = 0){
         $this->get_url = "http://cackle.me/api/2.0/review/list.json?id=$this->siteId&accountApiKey=$this->accountApiKey&siteApiKey=$this->siteApiKey";
-        $host = $this->get_url . "&modified=" . $review_last_modified . "&page=" . $cackle_page . "&size=2";
+        $host = $this->get_url . "&modified=" . $review_last_modified . "&page=" . $cackle_page . "&size=100";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $host);
 
